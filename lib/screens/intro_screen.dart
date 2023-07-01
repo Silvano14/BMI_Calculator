@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:globo_fitness/shared/menu_drawer.dart';
+
+import '../shared/menu_button.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -6,18 +9,20 @@ class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Globo fitness')),
+      appBar: AppBar(title: const Text('Globo fitness')),
+      drawer: const MenuDrawer(),
+      bottomNavigationBar: const MenuButton(),
       body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/beach.jpg'), fit: BoxFit.cover)),
           child: Center(
               child: Container(
-                  padding: EdgeInsets.all(24),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(24),
+                  decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       color: Colors.white70),
-                  child: Text(
+                  child: const Text(
                     'Commit to be fit',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 22, shadows: [
